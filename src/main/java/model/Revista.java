@@ -1,13 +1,18 @@
 package model;
 
+//clase final para las revistas, que hereda de MaterialEscrito
 public class Revista extends MaterialEscrito {
 
+
+    //contador independiente del Libro
     private static int contador = 0;
 
     private String editorial;
     private String periodicidad;
     private String fechaPublicacion;
 
+
+    //llamará al constructor de MaterialEscrito con super()
     public Revista(String titulo, int unidadesDisponibles, String autor, int numeroPaginas,
                    String editorial, String periodicidad, String fechaPublicacion) {
         super(titulo, unidadesDisponibles, autor, numeroPaginas);
@@ -16,13 +21,15 @@ public class Revista extends MaterialEscrito {
         this.fechaPublicacion = fechaPublicacion;
     }
 
+    //genera el código único de la revista
+    //el contador de la revista no debe mezclarse con el del libro
     @Override
     protected String generarCodigo() {
         contador++;
         return String.format("REV%05d", contador);
     }
 
-    // Getters
+    // Getters para leer los datos de la revista
     public String getEditorial() {
         return editorial;
     }
@@ -35,7 +42,7 @@ public class Revista extends MaterialEscrito {
         return fechaPublicacion;
     }
 
-    // Setters
+    // Setters para modificar los datos
     public void setEditorial(String editorial) {
         this.editorial = editorial;
     }

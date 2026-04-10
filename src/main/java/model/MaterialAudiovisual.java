@@ -1,7 +1,6 @@
 package model;
 
 //agrupamos los materiales que se escuchan o se ven como CD y DVD
-//
 public abstract class MaterialAudiovisual extends Material {
 
     protected int duracion;
