@@ -4,8 +4,8 @@ package model;
 //hereda todo del material y agregara el autor y las páginas
 public abstract class MaterialEscrito extends Material {
 
-    protected String autor;
-    protected int numeroPaginas;
+    private String autor;
+    private int numeroPaginas;
 
     // llamamos al constructor de material con super() y va a agregar sus propios datos
     public MaterialEscrito(String titulo, int unidadesDisponibles, String autor, int numeroPaginas) {

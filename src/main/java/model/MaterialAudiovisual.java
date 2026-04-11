@@ -3,8 +3,8 @@ package model;
 //agrupamos los materiales que se escuchan o se ven como CD y DVD
 public abstract class MaterialAudiovisual extends Material {
 
-    protected int duracion;
-    protected String genero;
+    private int duracion;
+    private String genero;
 
     //llamamos al constructor de material con super()
     public MaterialAudiovisual(String titulo, int unidadesDisponibles, int duracion, String genero) {

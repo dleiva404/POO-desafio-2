@@ -5,9 +5,9 @@ package model;
 //siempre sera un Libro-Revista-CD-DVD
 public abstract class Material {
     //atributos que tienen todos los materiales
-    protected String idInterno; //Codigo único que tendrá el material
-    protected String titulo;
-    protected int unidadesDisponibles;
+    private String idInterno; //Codigo único que tendrá el material
+    private String titulo;
+    private int unidadesDisponibles;
 
     //Constructor recibe todas las subclases cuando llama a super()
     public Material(String titulo, int unidadesDisponibles) {
