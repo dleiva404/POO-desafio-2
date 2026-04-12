@@ -4,22 +4,25 @@ package model;
 //es abstracta porque nunca vamos a poder crear un material genérico
 //siempre sera un Libro-Revista-CD-DVD
 public abstract class Material {
-    //atributos que tienen todos los materiales
-    private String idInterno; //Codigo único que tendrá el material
+    // atributos que tienen todos los materiales
+    private String idInterno; // Codigo único que tendrá el material
     private String titulo;
     private int unidadesDisponibles;
 
-    //Constructor recibe todas las subclases cuando llama a super()
+    // Constructor recibe todas las subclases cuando llama a super()
     public Material(String titulo, int unidadesDisponibles) {
         this.titulo = titulo;
         this.unidadesDisponibles = unidadesDisponibles;
-        this.idInterno = generarCodigo(); //se va a generar cuando se crea el objeto
+        this.idInterno = generarCodigo(); // se va a generar cuando se crea el objeto
     }
 
-    //cada subclase va a implementar este método por ejemplo libro pondrá LIB
+    // cada subclase va a implementar este método por ejemplo libro pondrá LIB
     protected abstract String generarCodigo();
 
-    //Getters para que otras clases puedan leer los datos
+    // cada clase sabe mostrar sus propios datos
+    public abstract String mostrarDatos();
+
+    // Getters para que otras clases puedan leer los datos
     public String getIdInterno() {
         return idInterno;
     }
@@ -32,7 +35,7 @@ public abstract class Material {
         return unidadesDisponibles;
     }
 
-    //Setters para que se carguen los datos desde la BD
+    // Setters para que se carguen los datos desde la BD
     public void setIdInterno(String idInterno) {
         this.idInterno = idInterno;
     }
@@ -45,10 +48,9 @@ public abstract class Material {
         this.unidadesDisponibles = unidadesDisponibles;
     }
 
-@Override
-public String toString() {
-    return "[" + getIdInterno() + "] " + titulo;
+    @Override
+    public String toString() {
+        return "[" + getIdInterno() + "] " + titulo;
 
     }
-  }
-
+}

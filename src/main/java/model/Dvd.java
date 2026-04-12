@@ -3,14 +3,14 @@ package model;
 // clase final para DVD, que hereda de MaterialAudiovisual
 // genera códigos
 public class Dvd extends MaterialAudiovisual {
-    //contador propio de Dvd, que es independiente de los demás
+    // contador propio de Dvd, que es independiente de los demás
     private static int contador = 0;
 
     private String director;
 
     // llama al constructor de MaterialAudiovisual con super()
     public Dvd(String titulo, int unidadesDisponibles, int duracion, String genero,
-               String director) {
+            String director) {
         super(titulo, unidadesDisponibles, duracion, genero);
         this.director = director;
     }
@@ -22,14 +22,32 @@ public class Dvd extends MaterialAudiovisual {
         return String.format("DVD%05d", contador);
     }
 
-    //Getter para leer el directos del DVD
+    @Override
+    public String mostrarDatos() {
+        return "ID        : " + getIdInterno() + "\n" +
+                "Título    : " + getTitulo() + "\n" +
+                "Duración  : " + getDuracion() + " min\n" +
+                "Género    : " + getGenero() + "\n" +
+                "Director  : " + getDirector() + "\n" +
+                "Unidades  : " + getUnidadesDisponibles();
+    }
+
+    // Getter para leer el directos del DVD
     public String getDirector() {
         return director;
     }
 
-    //Setter para modificar el director
+    // Setter para modificar el director
     public void setDirector(String director) {
         this.director = director;
     }
 
+    // para sincronizar el contador con la BD al arrancar la app
+    public static void setContador(int valor) {
+        contador = valor;
+    }
+
+    public static int getContador() {
+        return contador;
+    }
 }

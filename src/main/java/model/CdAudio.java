@@ -3,26 +3,37 @@ package model;
 //clase final para los CDS, que hereda de MaterialAudioVisual
 public class CdAudio extends MaterialAudiovisual {
 
-    //contador propio de los CDs, que es independiente de los demás
+    // contador propio de los CDs, que es independiente de los demás
     private static int contador = 0;
 
     private String artista;
     private int numeroCanciones;
 
-    //llamara al constructor de MaterialAudioVisual con super()
-    //también llama al constructor de Material
+    // llamara al constructor de MaterialAudioVisual con super()
+    // también llama al constructor de Material
     public CdAudio(String titulo, int unidadesDisponibles, int duracion, String genero,
-                   String artista, int numeroCanciones) {
+            String artista, int numeroCanciones) {
         super(titulo, unidadesDisponibles, duracion, genero);
         this.artista = artista;
         this.numeroCanciones = numeroCanciones;
     }
 
-    //generará el código único del CD el momento que se crea
+    // generará el código único del CD el momento que se crea
     @Override
     protected String generarCodigo() {
         contador++;
         return String.format("CDA%05d", contador);
+    }
+
+    @Override
+    public String mostrarDatos() {
+        return "ID        : " + getIdInterno() + "\n" +
+                "Título    : " + getTitulo() + "\n" +
+                "Duración  : " + getDuracion() + " min\n" +
+                "Género    : " + getGenero() + "\n" +
+                "Artista   : " + getArtista() + "\n" +
+                "Número de Canciones : " + getNumeroCanciones() + "\n" +
+                "Unidades  : " + getUnidadesDisponibles();
     }
 
     // Getters para leer artista y número de canciones
@@ -41,6 +52,15 @@ public class CdAudio extends MaterialAudiovisual {
 
     public void setNumeroCanciones(int numeroCanciones) {
         this.numeroCanciones = numeroCanciones;
+    }
+
+    // para sincronizar el contador con la BD al arrancar la app
+    public static void setContador(int valor) {
+        contador = valor;
+    }
+
+    public static int getContador() {
+        return contador;
     }
 
 }
