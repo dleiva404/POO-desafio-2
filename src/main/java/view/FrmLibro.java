@@ -8,11 +8,11 @@ public class FrmLibro extends JInternalFrame {
     private JTextField txtTitulo, txtUnidades, txtAutor, txtEditorial, txtIsbn, txtPaginas, txtAnio;
     private JButton btnGuardar, btnLimpiar;
 
-    // Colores de tu imagen de referencia
-    private final Color azulHeader = new Color(28, 57, 84);    // Azul oscuro para el título
-    private final Color fondoOscuro = new Color(43, 43, 43);   // Gris oscuro del fondo
-    private final Color fondoCampo = new Color(30, 30, 30);    // Fondo de los TXT
-    private final Color textoGris = new Color(200, 200, 200);  // Color de las etiquetas
+    
+    private final Color azulHeader = new Color(28, 57, 84); 
+    private final Color fondoOscuro = new Color(43, 43, 43);   
+    private final Color fondoCampo = new Color(30, 30, 30);    
+    private final Color textoGris = new Color(200, 200, 200);  
 
     public FrmLibro() {
         super("", true, true, true, true);
@@ -20,7 +20,7 @@ public class FrmLibro extends JInternalFrame {
         getContentPane().setBackground(fondoOscuro);
         setLayout(new BorderLayout());
 
-        // ---  ENCABEZADO  ---
+        // Encabezado
         JPanel pnlHeader = new JPanel(new FlowLayout(FlowLayout.LEFT, 15, 12));
         pnlHeader.setBackground(azulHeader);
 
@@ -30,7 +30,7 @@ public class FrmLibro extends JInternalFrame {
 
         pnlHeader.add(lblHeader);
 
-        // --- PANEL DE DATOS ---
+        // Panel de datos
         JPanel pnlDatos = new JPanel(new GridBagLayout());
         pnlDatos.setBackground(fondoOscuro);
         pnlDatos.setBorder(BorderFactory.createEmptyBorder(20, 30, 10, 30));
