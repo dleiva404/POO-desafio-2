@@ -14,7 +14,7 @@ public class FrmRevista extends JInternalFrame {
     private final Color textoGris = new Color(200, 200, 200);
 
     public FrmRevista() {
-        super("Registro de Revistas", true, true, true, true);
+        super("", true, true, true, true);
         setSize(550, 500);
         getContentPane().setBackground(fondoOscuro);
         setLayout(new BorderLayout());
