@@ -62,7 +62,7 @@ public class FrmLibro extends JInternalFrame {
         pnlBotones.add(btnLimpiar);
         pnlBotones.add(btnGuardar);
 
-        add(pnlHeader, BorderLayout.NORTH); // Aquí va el azul
+        add(pnlHeader, BorderLayout.NORTH);
         add(pnlDatos, BorderLayout.CENTER);
         add(pnlBotones, BorderLayout.SOUTH);
     }
