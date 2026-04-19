@@ -63,15 +63,14 @@ public class FrmPrincipal extends JFrame {
     }
 
     private void abrirVentana(JInternalFrame ventana) {
-        // 1. Buscamos todas las ventanas que ya estén en el escritorio
         JInternalFrame[] ventanasAbiertas = escritorio.getAllFrames();
 
-        // 2. Las cerramos todas para limpiar la pantalla
+        // Cerramos las ventanas para limpiar la pantalla
         for (JInternalFrame f : ventanasAbiertas) {
             f.dispose();
         }
 
-        // Agregamos la nueva ventana limpia
+        // Agregamos una nueva ventana limpia
         escritorio.add(ventana);
 
         Dimension ds = escritorio.getSize();
