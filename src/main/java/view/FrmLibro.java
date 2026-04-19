@@ -15,7 +15,6 @@ public class FrmLibro extends JInternalFrame {
     private final Color textoGris = new Color(200, 200, 200);  // Color de las etiquetas
 
     public FrmLibro() {
-        // Quitamos el título del super para poner nuestro propio encabezado azul
         super("", true, true, true, true);
         setSize(550, 550);
         getContentPane().setBackground(fondoOscuro);
@@ -48,22 +47,21 @@ public class FrmLibro extends JInternalFrame {
         añadirFila(pnlDatos, gbc, 5, "Número de Páginas:", txtPaginas = new JTextField());
         añadirFila(pnlDatos, gbc, 6, "Año Publicación:", txtAnio = new JTextField());
 
-        // --- 3. PANEL DE BOTONES (Sur) ---
+        // Panel de botones 
         JPanel pnlBotones = new JPanel(new FlowLayout(FlowLayout.CENTER, 25, 20));
         pnlBotones.setBackground(fondoOscuro);
 
         btnLimpiar = new JButton("Limpiar Campos");
         btnGuardar = new JButton("Guardar Libro");
 
-        // Estilo Botón Limpiar (Rojo)
+        // Estilo de boton limpiar color rojo
         estilizarBoton(btnLimpiar, new Color(160, 40, 40));
-        // Estilo Botón Guardar (Verde)
+        // Estilo boton guardar color verde
         estilizarBoton(btnGuardar, new Color(56, 102, 0));
 
         pnlBotones.add(btnLimpiar);
         pnlBotones.add(btnGuardar);
 
-        // Ensamblaje final
         add(pnlHeader, BorderLayout.NORTH); // Aquí va el azul
         add(pnlDatos, BorderLayout.CENTER);
         add(pnlBotones, BorderLayout.SOUTH);
