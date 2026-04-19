@@ -14,7 +14,7 @@ public class FrmDVD extends JInternalFrame {
     private final Color textoGris = new Color(200, 200, 200);
 
     public FrmDVD() {
-        super("Registro de DVDs", true, true, true, true);
+        super("", true, true, true, true);
         setSize(550, 480);
         getContentPane().setBackground(fondoOscuro);
         setLayout(new BorderLayout());
