@@ -62,9 +62,6 @@ public class FrmPrincipal extends JFrame {
         itemSalir.addActionListener(e -> System.exit(0));
     }
 
-    /**
-     * Lógica para abrir una ventana cerrando la anterior
-     */
     private void abrirVentana(JInternalFrame ventana) {
         // 1. Buscamos todas las ventanas que ya estén en el escritorio
         JInternalFrame[] ventanasAbiertas = escritorio.getAllFrames();
@@ -74,7 +71,7 @@ public class FrmPrincipal extends JFrame {
             f.dispose();
         }
 
-        // 3. Agregamos la nueva ventana limpia
+        // Agregamos la nueva ventana limpia
         escritorio.add(ventana);
 
         Dimension ds = escritorio.getSize();
