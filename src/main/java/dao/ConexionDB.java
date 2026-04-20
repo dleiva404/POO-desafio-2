@@ -10,7 +10,7 @@ import org.apache.logging.log4j.Logger;
 
 public class ConexionDB {
 
-    private static final String URL = "jdbc:mariadb://localhost:3307/mediateca";
+    private static final String URL = "jdbc:mariadb://localhost:3306/mediateca";
     private static final String USUARIO = "root";
     private static final String CONTRASENA = "admin";
 
