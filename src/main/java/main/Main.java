@@ -10,7 +10,7 @@ import org.apache.logging.log4j.Logger;
 
 public class Main {
 
-    // LOGGER (VA FUERA DEL MAIN)
+    // LOGGER
     private static final Logger logger = LogManager.getLogger(Main.class);
 
     public static void main(String[] args) {
@@ -25,17 +25,13 @@ public class Main {
 
             service.agregarMaterial(libro);
 
-            // CAMBIO DE println → logger
             logger.info("Libro agregado: " + libro.getIdInterno());
 
             List<Material> lista = service.listarTodosMateriales();
 
-            // CAMBIO DE println → logger
             logger.info("Total de materiales: " + lista.size());
 
         } catch (Exception e) {
-
-            // CAMBIO DE printStackTrace → logger
             logger.error("Error en el sistema", e);
         }
     }

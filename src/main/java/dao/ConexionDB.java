@@ -10,7 +10,8 @@ import org.apache.logging.log4j.Logger;
 
 public class ConexionDB {
 
-    private static final String URL = "jdbc:mariadb://localhost:3306/mediateca?allowPublicKeyRetrieval=true&useSSL=false";    private static final String USUARIO = "root";
+    private static final String URL = "jdbc:mariadb://localhost:3306/mediateca?allowPublicKeyRetrieval=true&useSSL=false";
+    private static final String USUARIO = "root";
     private static final String CONTRASENA = "admin";
 
     private static Connection connection = null;
@@ -34,14 +35,12 @@ public class ConexionDB {
 
                 // ERROR SI NO ENCUENTRA EL DRIVER
                 logger.error("Driver de MariaDB no encontrado", e);
-
                 throw new SQLException("Driver de MariaDB no encontrado", e);
 
             } catch (SQLException e) {
 
                 // ERROR DE CONEXIÓN
                 logger.error("Error al conectar a la base de datos", e);
-
                 throw e;
             }
         }
@@ -58,8 +57,6 @@ public class ConexionDB {
                 logger.info("Conexión cerrada correctamente");
 
             } catch (SQLException e) {
-
-                // REEMPLAZO DE System.err
                 logger.error("Error cerrando conexión", e);
             }
         }
