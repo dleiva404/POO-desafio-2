@@ -50,6 +50,7 @@ public class FrmPrincipal extends JFrame {
         barraMenu.add(mnuRegistros);
         barraMenu.add(mnuConsultas);
         barraMenu.add(mnuSistema);
+
         setJMenuBar(barraMenu);
     }
 
@@ -73,14 +74,17 @@ public class FrmPrincipal extends JFrame {
 
         Dimension ds = escritorio.getSize();
         Dimension fs = ventana.getSize();
+
         int x = (ds.width - fs.width) / 2;
         int y = (ds.height - fs.height) / 2;
 
         ventana.setLocation(x, y);
         ventana.setVisible(true);
+
         try {
             ventana.setSelected(true);
-        } catch (Exception e) { }
+        } catch (Exception e) {
+        }
     }
 
     public static void main(String[] args) {

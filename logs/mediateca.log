@@ -150,3 +150,31 @@ java.sql.SQLInvalidAuthorizationSpecException: (conn=14) Access denied for user 
 	at dao.LibroDAO.sincronizarContador(LibroDAO.java:15) ~[classes/:?]
 	at servicio.MediatecaService.sincronizarContadores(MediatecaService.java:24) ~[classes/:?]
 	at main.Main.main(Main.java:20) [classes/:?]
+2026-04-19 21:18:44 [INFO] Main - Iniciando sistema de Mediateca
+2026-04-19 21:18:44 [INFO] ConexionDB - Conexión exitosa a la base de datos
+2026-04-19 21:18:44 [ERROR] Main - Error en el sistema
+java.sql.SQLSyntaxErrorException: (conn=4) Table 'mediateca.libros' doesn't exist
+	at org.mariadb.jdbc.export.ExceptionFactory.createException(ExceptionFactory.java:289) ~[mariadb-java-client-3.3.3.jar:?]
+	at org.mariadb.jdbc.export.ExceptionFactory.create(ExceptionFactory.java:378) ~[mariadb-java-client-3.3.3.jar:?]
+	at org.mariadb.jdbc.message.ClientMessage.readPacket(ClientMessage.java:172) ~[mariadb-java-client-3.3.3.jar:?]
+	at org.mariadb.jdbc.client.impl.StandardClient.readPacket(StandardClient.java:915) ~[mariadb-java-client-3.3.3.jar:?]
+	at org.mariadb.jdbc.client.impl.StandardClient.readResults(StandardClient.java:854) ~[mariadb-java-client-3.3.3.jar:?]
+	at org.mariadb.jdbc.client.impl.StandardClient.readResponse(StandardClient.java:773) ~[mariadb-java-client-3.3.3.jar:?]
+	at org.mariadb.jdbc.client.impl.StandardClient.execute(StandardClient.java:697) ~[mariadb-java-client-3.3.3.jar:?]
+	at org.mariadb.jdbc.Statement.executeInternal(Statement.java:1035) ~[mariadb-java-client-3.3.3.jar:?]
+	at org.mariadb.jdbc.Statement.executeQuery(Statement.java:166) ~[mariadb-java-client-3.3.3.jar:?]
+	at dao.LibroDAO.sincronizarContador(LibroDAO.java:17) ~[classes/:?]
+	at servicio.MediatecaService.sincronizarContadores(MediatecaService.java:24) ~[classes/:?]
+	at main.Main.main(Main.java:20) [classes/:?]
+2026-04-19 21:23:35 [INFO] Main - Iniciando sistema de Mediateca
+2026-04-19 21:23:35 [INFO] ConexionDB - Conexión exitosa a la base de datos
+2026-04-19 21:23:35 [INFO] ConexionDB - Conexión exitosa a la base de datos
+2026-04-19 21:23:35 [INFO] ConexionDB - Conexión exitosa a la base de datos
+2026-04-19 21:23:35 [INFO] ConexionDB - Conexión exitosa a la base de datos
+2026-04-19 21:23:35 [INFO] ConexionDB - Conexión exitosa a la base de datos
+2026-04-19 21:23:35 [INFO] Main - Libro agregado: LIB00001
+2026-04-19 21:23:35 [INFO] ConexionDB - Conexión exitosa a la base de datos
+2026-04-19 21:23:35 [INFO] ConexionDB - Conexión exitosa a la base de datos
+2026-04-19 21:23:35 [INFO] ConexionDB - Conexión exitosa a la base de datos
+2026-04-19 21:23:35 [INFO] ConexionDB - Conexión exitosa a la base de datos
+2026-04-19 21:23:35 [INFO] Main - Total de materiales: 1
